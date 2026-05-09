@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import rehypePunctilio from "punctilio/rehype"
 
 /**
  * Quartz 4 Configuration
@@ -8,7 +9,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Riski Page",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,13 +24,13 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "EB Garamond",
+        body: "EB Garamond",
+        code: "Fira Code",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
+          light: "#fcfcfc",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
@@ -55,6 +56,12 @@ const config: QuartzConfig = {
   },
   plugins: {
     transformers: [
+      {
+        name: "RehypePunctilio",
+        htmlPlugins() {
+          return [[rehypePunctilio, { ignoreElements: ["code", "pre", "kbd"] }]]
+        }
+      },
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],

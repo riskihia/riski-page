@@ -1,8 +1,6 @@
 ---
-title: Welcome to Quartz
+title: Welcome to My Page
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
-Edited by riski here
-Clear branch
+Good morning :)
+Dont forget to ready & write then code xD

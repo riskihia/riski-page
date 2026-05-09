@@ -1,3 +1,91 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// 1. Exponential Font Sizing Variables
+:root {
+  --base-font-size: 20px; // Mobile
+  
+  @media all and (min-width: 800px) {
+    --base-font-size: 22px; // Tablet
+  }
+  @media all and (min-width: 1200px) {
+    --base-font-size: 24px; // Desktop
+  }
+
+  --font-ratio: 1.2;
+  
+  // n=0
+  --font-size-base: var(--base-font-size);
+  // n=1 to 5
+  --h5-size: calc(var(--font-size-base) * var(--font-ratio));
+  --h4-size: calc(var(--h5-size) * var(--font-ratio));
+  --h3-size: calc(var(--h4-size) * var(--font-ratio));
+  --h2-size: calc(var(--h3-size) * var(--font-ratio));
+  --h1-size: calc(var(--h2-size) * var(--font-ratio));
+  
+  // Base spacing
+  --base-spacing: 1.5rem;
+}
+
+// 2. Global Text & Oldstyle Numerals
+body {
+  font-size: var(--font-size-base);
+  font-variant-numeric: oldstyle-nums;
+}
+
+// 3. Headings Sizing & Balance
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+h4 { font-size: var(--h4-size); }
+h5 { font-size: var(--h5-size); }
+h6 { font-size: var(--h5-size); }
+
+h1, h2, h3, h4, h5, h6, figcaption, .caption {
+  text-wrap: balance;
+  margin-bottom: calc(var(--base-spacing) * 0.5);
+  margin-top: calc(var(--base-spacing) * 1.5);
+}
+
+// 4. Paragraph Polish
+p {
+  text-wrap: pretty;
+  margin-bottom: var(--base-spacing);
+  margin-top: 0;
+  text-indent: 0; // Hilangkan indentasi
+}
+
+// 5. Smallcaps Utility
+.smallcaps {
+  font-variant-caps: small-caps;
+  text-transform: lowercase; // Menurunkan secara visual untuk estetika klasik
+}
+
+/* --- 6. Editorial Drop Cap --- */
+article {
+  > p:first-of-type {
+    &::first-letter {
+      font-family: "EB Garamond", "Lora", serif;
+      font-size: 4.5em;
+      float: left;
+      line-height: 0.8;
+      margin-right: 0.1em;
+      margin-top: 0.05em;
+      font-weight: bold;
+      color: var(--dark);
+    }
+  }
+}
+
+/* --- 7. Penyesuaian Layout & Max Width --- */
+.page .center {
+  max-width: 750px !important; // Optimal untuk 50-75 karakter per baris
+}
+
+.sidebar.left {
+  padding-right: 1.5rem;
+  
+  .search {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
