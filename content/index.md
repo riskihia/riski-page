@@ -1,5 +1,5 @@
 ---
-title: Staring my Personal pages
+title: Starting my Personal pages
 ---
 Hi, selamat datang di Riski Page
 
