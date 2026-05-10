@@ -1,6 +1,8 @@
 ---
-title: Welcome to My Page
+title: Staring my Personal pages
 ---
+Hi, selamat datang di Riski Page
 
-Good morning :)
-Dont forget to ready & write then code xD
+Halaman ini saya buat menggunakan Quartz & Github pages
+
+Halaman ini akan berisi catatan, informasi, tutorial, dan semua hal yang ingin saya tulis xD
