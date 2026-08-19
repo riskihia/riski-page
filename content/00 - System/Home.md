@@ -1,0 +1,82 @@
+---
+type: system
+title: Home Dashboard
+---
+
+# 🌳 My Knowledge Garden
+
+> *A place to capture daily thoughts, cultivate ideas, connect concepts, and grow lifetime knowledge.*
+
+---
+
+## 📅 Today
+
+* **[[2026-08-19]]** — *Catatan harian hari ini (19 Agustus 2026)*
+
+> 💡 **Tips Daily Note:** Di Obsidian, Anda juga bisa langsung menekan ikon **Kalender (Open today's daily note)** di panel sebelah kiri untuk otomatis membuka/membuat catatan harian hari ini.
+
+---
+
+### ⚡ Quick Links & Guides
+* 📜 **[[How This Garden Works]]** — *Panduan Standar & 7 Aturan Emas Garden*
+* 📋 **[[Daily]]** — *Template Daily Note*
+* 🌱 **[[Seed]]** — *Template Seed Note*
+* 🌳 **[[Garden]]** — *Template Garden Note*
+
+---
+
+## 🧭 Navigation & Areas
+
+| Area | Purpose |
+| :--- | :--- |
+| **[[01 - Daily]]** | Catatan harian & penangkapan ide spontan |
+| **[[02 - Seeds]]** | Ide & observasi mentah |
+| **[[03 - Sprouts]]** | Ide yang sedang dikembangkan |
+| **[[04 - Plants]]** | Pengetahuan matang & terhubung (Evergreen) |
+| **[[05 - Harvest]]** | Hasil karya, proyek, & keputusan |
+| **[[06 - Sources]]** | Buku, artikel, video, & paper |
+| **[[99 - Archive]]** | Catatan lama atau inaktif |
+
+---
+
+## 🌳 Knowledge Maps (Main Gardens)
+
+* 🤖 **[[AI]]** — *Artificial Intelligence, LLM, RAG, & Agents*
+* 💻 **[[Programming]]** — *Software Architecture, Clean Code, & Engineering*
+* 💼 **[[Business]]** — *Strategy, Product, & Growth*
+* 🧠 **[[Psychology]]** — *Mental Models, Learning, & Behavior*
+* ✍️ **[[Writing]]** — *Storytelling, Worldbuilding, & Structure*
+
+---
+
+## 🔄 Growth Cycle
+
+```text
+📅 Daily (01 - Daily)
+   │
+   ↓
+🌱 Seed (02 - Seeds)
+   │
+   ↓
+🌿 Sprouts (03 - Sprouts)
+   │
+   ↓
+🌳 Plants (04 - Plants)
+   │
+   ↓
+🍎 Harvest (05 - Harvest)
+   │
+   ↓
+🌲 Connected Knowledge Garden
+```
+
+---
+
+## 🌱 7 Aturan Emas Garden
+1. **Daily Notes bersifat kronologis**: Tempat mencatat spontan harian.
+2. **Seeds boleh berantakan**: Cukup tangkap pemikiran awal.
+3. **Garden Notes berisi pemahaman sendiri**: Tulis dengan bahasa Anda sendiri.
+4. **Links lebih penting dari folder**: Gunakan `[[...]]` untuk membangun jaringan pengetahuan.
+5. **Tidak semua Seed harus jadi Garden**: Wajar jika ada Seed yang tidak dilanjutkan.
+6. **Evergreen bukan berarti selesai**: Catatan matang terus berkembang (`## Evolution`).
+7. **Jangan over-optimize**: Utamakan menulis pengetahuan dibanding merapikan visual.

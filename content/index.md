@@ -1,22 +1,49 @@
 ---
-title: Starting my Personal pages
+title: Welcome to Riski's Knowledge Garden
 publish: true
 ---
-Hi, selamat datang di **Riski Page**! 👋
 
-Halaman ini dibuat menggunakan **Quartz 5** & GitHub Pages. Berisi catatan, informasi, tutorial, dan hasil bacaan yang saya pelajari.
+# 🌳 Riski's Knowledge Garden
 
-> [!note] Catatan & Inspirasi
-> Situs ini terinspirasi dari konsep *Digital Garden* & karya Alex Turner ([turntrout.com](https://turntrout.com)).
+> *A place to capture daily thoughts, cultivate ideas, connect concepts, and grow lifetime knowledge.*
 
-> [!tip] Fitur Utama Riski Page
-> - 🚀 **Fast & Responsive**: Dibangun di atas Quartz 5 SSG.
-> - 🧠 **Knowledge Graph**: Hubungan antar catatan tervisualisasi secara interaktif.
-> - 📝 **Markdown & Callouts**: Mendukung sintaks Obsidian, diagram Mermaid, dan matematika KaTeX.
+---
+
+> [!note] Mekanisme Selective Publishing
+> Catatan baru yang Anda buat secara default bersifat **privat (rahasia)**. Catatan hanya akan muncul di web jika Anda menambahkan `publish: true` pada frontmatter YAML di bagian atas file.
+
+---
+
+## 🧭 Navigation & Areas
+
+| Area | Purpose | Status Publik |
+| :--- | :--- | :--- |
+| **01 - Daily** | Catatan harian & penangkapan ide spontan | Privat |
+| **02 - Seeds 🌱** | Ide & observasi mentah | Privat |
+| **03 - Sprouts 🌿** | Ide yang sedang dikembangkan | Privat |
+| **04 - Plants 🌳** | Pengetahuan matang & terhubung (Evergreen) | Dipublikasikan (`publish: true`) |
+| **05 - Harvest 🌾** | Hasil karya, proyek, & keputusan | Dipublikasikan (`publish: true`) |
+| **06 - Sources 📚** | Buku, artikel, video, & paper | Privat / Terpilih |
+
+---
+
+## 🔄 Growth Cycle
 
 ```mermaid
 graph TD
-    A[Catatan & Ide] --> B(Quartz 5 SSG)
-    B --> C{Web Static}
-    C --> D[Riski Page Web]
+    Daily[📅 01 - Daily] --> Seed[🌱 02 - Seeds]
+    Seed --> Sprout[🌿 03 - Sprouts]
+    Sprout --> Plant[🌳 04 - Plants]
+    Plant --> Harvest[🌾 05 - Harvest]
 ```
+
+---
+
+## 🌱 7 Aturan Emas Garden
+1. **Daily Notes bersifat kronologis**: Tempat mencatat spontan harian.
+2. **Seeds boleh berantakan**: Cukup tangkap pemikiran awal.
+3. **Garden Notes berisi pemahaman sendiri**: Tulis dengan bahasa Anda sendiri.
+4. **Links lebih penting dari folder**: Gunakan `[[...]]` untuk membangun jaringan pengetahuan.
+5. **Tidak semua Seed harus jadi Garden**: Wajar jika ada Seed yang tidak dilanjutkan.
+6. **Evergreen bukan berarti selesai**: Catatan matang terus berkembang.
+7. **Jangan over-optimize**: Utamakan menulis pengetahuan dibanding merapikan visual.
