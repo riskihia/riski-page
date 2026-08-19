@@ -1,6 +1,6 @@
 ---
 title: Indexing B-Tree dan GIN di PostgreSQL
-publish: false
+publish: true
 ---
 
 # 🌿 Indexing B-Tree dan GIN di PostgreSQL

@@ -1,6 +1,6 @@
 ---
 title: AI Agentic Reasoning
-publish: false
+publish: true
 ---
 
 # 🌱 AI Agentic Reasoning

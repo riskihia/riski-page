@@ -1,6 +1,6 @@
 ---
 title: Message Broker Kafka vs RabbitMQ
-publish: false
+publish: true
 ---
 
 # 🌿 Message Broker Kafka vs RabbitMQ

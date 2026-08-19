@@ -1,6 +1,6 @@
 ---
 title: RAG dan Agentic Workflows
-publish: false
+publish: true
 ---
 
 # 🌱 RAG dan Agentic Workflows

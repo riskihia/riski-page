@@ -1,6 +1,6 @@
 ---
 title: Evolusi PHP dan Ekosistem Framework
-publish: false
+publish: true
 ---
 
 # 🌱 Evolusi PHP dan Ekosistem Framework

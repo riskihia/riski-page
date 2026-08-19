@@ -1,6 +1,6 @@
 ---
 title: Optimasi Query SQL
-publish: false
+publish: true
 ---
 
 # 🌱 Optimasi Query SQL

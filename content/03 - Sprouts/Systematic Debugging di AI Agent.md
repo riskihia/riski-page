@@ -1,6 +1,6 @@
 ---
 title: Systematic Debugging di AI Agent
-publish: false
+publish: true
 ---
 
 # 🌿 Systematic Debugging di AI Agent

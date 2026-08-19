@@ -1,6 +1,6 @@
 ---
 title: Desain Pipeline Vector Database dan Chunking
-publish: false
+publish: true
 ---
 
 # 🌿 Desain Pipeline Vector Database dan Chunking

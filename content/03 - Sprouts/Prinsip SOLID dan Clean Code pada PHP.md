@@ -1,6 +1,6 @@
 ---
 title: Prinsip SOLID dan Clean Code pada PHP
-publish: false
+publish: true
 ---
 
 # 🌿 Prinsip SOLID dan Clean Code pada PHP

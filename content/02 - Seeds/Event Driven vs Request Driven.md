@@ -1,6 +1,6 @@
 ---
 title: Event Driven vs Request Driven
-publish: false
+publish: true
 ---
 
 # 🌱 Event Driven vs Request Driven

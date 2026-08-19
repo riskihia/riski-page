@@ -1,6 +1,6 @@
 ---
 title: Server Components vs Client Components
-publish: false
+publish: true
 ---
 
 # 🌿 Server Components vs Client Components
