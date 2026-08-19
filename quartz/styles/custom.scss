@@ -1,3 +1,43 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// 1. Reduce excessive top spacing gap (from default 6rem / 96px down to 2rem / 32px)
+.page-header {
+  margin-top: 2rem !important;
+}
+
+.sidebar {
+  padding-top: 2rem !important;
+}
+
+// 2. Enhance font size and readability (EB Garamond Optimization)
+html {
+  font-size: 18px; // Increases base font size from 15px/16px to 18px for clear reading
+}
+
+body, p, li, td, th {
+  font-size: 1.05rem; // ~19px
+  line-height: 1.75; // Comfortable line spacing for reading long articles
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+code, pre {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
