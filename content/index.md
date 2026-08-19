@@ -1,5 +1,6 @@
 ---
 title: Starting my Personal pages
+publish: true
 ---
 Hi, selamat datang di **Riski Page**! 👋
 
