@@ -1,16 +1,33 @@
 ---
-title: Welcome to Riski's Knowledge Garden
+title: Welcome to Riski's Technology Garden
 publish: true
 ---
 
-# 🌳 Riski's Knowledge Garden
+# 🌳 Riski's Technology Knowledge Garden
 
-> *A place to capture daily thoughts, cultivate ideas, connect concepts, and grow lifetime knowledge.*
+> *A place to capture daily thoughts, cultivate software engineering concepts, and grow lifetime tech knowledge.*
 
 ---
 
-> [!note] Mekanisme Selective Publishing
+> [!note] Mekanisme Explicit Publishing
 > Catatan baru yang Anda buat secara default bersifat **privat (rahasia)**. Catatan hanya akan muncul di web jika Anda menambahkan `publish: true` pada frontmatter YAML di bagian atas file.
+
+---
+
+## 🧭 10 Topik Pengetahuan Utama (Tech Knowledge Map)
+
+| No | Topik Teknologi | Area Fokus Pengetahuan |
+| :-: | :--- | :--- |
+| **1** | 🤖 **[[AI & LLMs]]** | AI Engineering, RAG, Agentic Workflows, & Prompting |
+| **2** | 🏛️ **[[System Design]]** | Distributed Systems, Microservices, & Architecture |
+| **3** | 🐘 **[[PHP & Laravel]]** | Modern PHP 8.x, PSR Standards, & Laravel Ecosystem |
+| **4** | 🌐 **[[Frontend]]** | Modern React/Preact, Next.js, & Web Performance |
+| **5** | 🗄️ **[[Databases]]** | SQL Optimization, PostgreSQL, Redis Caching, & NoSQL |
+| **6** | ☁️ **[[DevOps & Cloud]]** | Docker, Kubernetes, CI/CD, & Cloud Infrastructure |
+| **7** | 🔒 **[[Cybersecurity]]** | OWASP Top 10, OAuth2/JWT, & Application Security |
+| **8** | ⚡ **[[Performance]]** | Profiling, Memory Optimization, & Scalability |
+| **9** | 🧹 **[[Clean Code]]** | SOLID Principles, Refactoring, & Design Patterns |
+| **10** | 🛠️ **[[Dev Productivity]]** | Advanced Git Workflows, CLI Tools, & Digital Garden |
 
 ---
 
