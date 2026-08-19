@@ -100,6 +100,10 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    options:
+      header: EB Garamond
+      body: EB Garamond
+      code: Fira Code
   - source: "@quartz-themes/core"
     enabled: false
     options:
