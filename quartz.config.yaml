@@ -10,6 +10,8 @@ configuration:
   baseUrl: riskihia.github.io/riski-page
   ignorePatterns:
     - private
+    - "private/**"
+    - "**/private/**"
     - templates
     - .obsidian
   theme:
