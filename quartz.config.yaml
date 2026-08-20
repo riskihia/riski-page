@@ -13,6 +13,8 @@ configuration:
     - "private/**"
     - "**/private/**"
     - templates
+    - "**/templates/**"
+    - "**/Templates/**"
     - .obsidian
   theme:
     fontOrigin: googleFonts
@@ -146,6 +148,35 @@ plugins:
       priority: 50
   - source: "@quartz-community/graph"
     enabled: true
+    options:
+      localGraph:
+        drag: true
+        zoom: true
+        depth: 2
+        scale: 1.15
+        repelForce: 0.7
+        centerForce: 0.3
+        linkDistance: 35
+        fontSize: 0.6
+        opacityScale: 1
+        removeTags: []
+        showTags: true
+        focusOnHover: true
+        enableRadial: false
+      globalGraph:
+        drag: true
+        zoom: true
+        depth: -1
+        scale: 0.95
+        repelForce: 0.6
+        centerForce: 0.25
+        linkDistance: 45
+        fontSize: 0.6
+        opacityScale: 1
+        removeTags: []
+        showTags: true
+        focusOnHover: true
+        enableRadial: true
     layout:
       position: right
       priority: 10
@@ -196,6 +227,11 @@ plugins:
       group: toolbar
   - source: "@quartz-community/breadcrumbs"
     enabled: true
+    options:
+      spacerSymbol: "❯"
+      rootName: "🏡 Home"
+      resolveFrontmatterTitle: true
+      showCurrentPage: true
     layout:
       position: beforeBody
       priority: 5
@@ -218,7 +254,16 @@ plugins:
       position: footer
       priority: 50
   - source: "@quartz-community/recent-notes"
-    enabled: false
+    enabled: true
+    options:
+      title: Recently Updated
+      limit: 3
+      showTags: true
+      hideTagPages: true
+      hideFolderPages: true
+    layout:
+      position: right
+      priority: 40
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
