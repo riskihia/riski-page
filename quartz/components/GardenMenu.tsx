@@ -86,6 +86,27 @@ export const GardenMenu: QuartzComponentConstructor = () => {
     )
   }
 
+  Component.afterDOMLoaded = `
+  function setupMobileGardenMenu() {
+    const isMobile = window.matchMedia("(max-width: 800px)").matches
+    const desktopMenu = document.querySelector(".sidebar.left .garden-menu")
+    const explorerContent = document.querySelector(".explorer .explorer-content")
+    
+    if (isMobile && desktopMenu && explorerContent) {
+      let mobileMenu = explorerContent.querySelector(".garden-menu-mobile")
+      if (!mobileMenu) {
+        mobileMenu = desktopMenu.cloneNode(true)
+        mobileMenu.classList.remove("desktop-only")
+        mobileMenu.classList.add("garden-menu-mobile")
+        explorerContent.prepend(mobileMenu)
+      }
+    }
+  }
+
+  document.addEventListener("nav", setupMobileGardenMenu)
+  document.addEventListener("render", setupMobileGardenMenu)
+  `
+
   return Component
 }
 
