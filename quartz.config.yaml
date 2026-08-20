@@ -138,14 +138,20 @@ plugins:
     enabled: true
   - source: "@quartz-community/tag-page"
     enabled: true
+  - source: "internal:garden-menu"
+    enabled: true
+    layout:
+      position: left
+      priority: 38
   - source: "@quartz-community/explorer"
     enabled: true
     options:
-      folderDefaultState: open
-      folderClickBehavior: link
+      title: "🗂️ All Files (Archive)"
+      folderDefaultState: collapsed
+      folderClickBehavior: collapse
     layout:
       position: left
-      priority: 50
+      priority: 60
   - source: "@quartz-community/graph"
     enabled: true
     options:

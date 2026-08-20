@@ -1,0 +1,92 @@
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import { pathToRoot } from "../util/path"
+import { classNames } from "../util/lang"
+
+interface MenuItem {
+  name: string
+  icon: string
+  href: string
+  badge?: string
+  external?: boolean
+}
+
+interface MenuSection {
+  title: string
+  items: MenuItem[]
+}
+
+const defaultSections: MenuSection[] = [
+  {
+    title: "The Garden",
+    items: [
+      { name: "Welcome / Start Here", icon: "🏡", href: "/" },
+      { name: "Tech Knowledge Map", icon: "🗺️", href: "/#-10-topik-pengetahuan-utama-tech-knowledge-map" },
+      { name: "Evergreen Notes", icon: "🌳", href: "/04---plants", badge: "Core" },
+      { name: "Essays & Harvest", icon: "🌾", href: "/05---harvest", badge: "Articles" },
+    ],
+  },
+  {
+    title: "About & Works",
+    items: [
+      { name: "About Me", icon: "👤", href: "/about" },
+      { name: "GitHub Projects", icon: "🛠️", href: "https://github.com/riskihia", external: true },
+      { name: "Portofolio", icon: "🚀", href: "https://github.com/riskihia", external: true },
+    ],
+  },
+  {
+    title: "Discovery",
+    items: [
+      { name: "Explore by Tags", icon: "🏷️", href: "/tags" },
+      { name: "RSS Feed", icon: "📡", href: "/index.xml" },
+    ],
+  },
+]
+
+export const GardenMenu: QuartzComponentConstructor = () => {
+  const Component: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
+    const root = pathToRoot(fileData.slug!)
+
+    return (
+      <div class={classNames(displayClass, "garden-menu")}>
+        {defaultSections.map((section) => (
+          <div class="menu-section" key={section.title}>
+            <div class="menu-section-title">{section.title}</div>
+            <ul class="menu-list">
+              {section.items.map((item) => {
+                let targetUrl = item.href
+                if (!item.external) {
+                  if (item.href === "/") {
+                    targetUrl = root === "." ? "./" : `${root}/`
+                  } else if (item.href.startsWith("/#")) {
+                    targetUrl = `${root === "." ? "./" : `${root}/`}${item.href.substring(1)}`
+                  } else if (item.href.startsWith("/")) {
+                    targetUrl = `${root === "." ? "." : root}${item.href}`
+                  }
+                }
+
+                return (
+                  <li class="menu-item" key={item.name}>
+                    <a
+                      href={targetUrl}
+                      class="menu-link"
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
+                    >
+                      <span class="menu-icon">{item.icon}</span>
+                      <span class="menu-label">{item.name}</span>
+                      {item.badge && <span class="menu-badge">{item.badge}</span>}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  return Component
+}
+
+export default GardenMenu

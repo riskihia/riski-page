@@ -58,6 +58,29 @@ td,
 
 .sidebar {
   padding-top: 2rem !important;
+  max-height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--lightgray) 80%, transparent) transparent;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--lightgray) 80%, transparent);
+    border-radius: 999px;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--gray) 60%, transparent);
+  }
 }
 
 html {
@@ -280,3 +303,92 @@ pre {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   padding: 1rem !important;
 }
+
+// --------------------------------------------------
+// 9. Curated Sidebar Navigation Menu (The Garden Compass)
+// --------------------------------------------------
+.garden-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin: 0.8rem 0 1.2rem 0;
+
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .menu-section-title {
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    margin: 0 0 0.2rem 0.4rem !important;
+    font-weight: 700;
+  }
+
+  .menu-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .menu-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .menu-link {
+    display: flex !important;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.42rem 0.65rem !important;
+    border-radius: 8px !important;
+    color: var(--darkgray) !important;
+    text-decoration: none !important;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background-color: transparent !important;
+    border-bottom: none !important;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--lightgray) 50%, transparent) !important;
+      color: var(--secondary) !important;
+      transform: translateX(4px);
+    }
+  }
+
+  .menu-icon {
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .menu-label {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .menu-badge {
+    font-size: 0.68rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    background-color: color-mix(in srgb, var(--secondary) 15%, transparent);
+    color: var(--secondary);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+}
+

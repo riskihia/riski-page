@@ -56,7 +56,17 @@ function readPluginsJson(): QuartzPluginsJson | null {
   return JSON.parse(raw) as QuartzPluginsJson
 }
 
+function isInternalSource(source: PluginSource): boolean {
+  if (typeof source === "string" && (source.startsWith("internal:") || source === "garden-menu")) {
+    return true
+  }
+  return false
+}
+
 function extractPluginName(source: PluginSource): string {
+  if (typeof source === "string" && source.startsWith("internal:")) {
+    return source.replace("internal:", "")
+  }
   if (typeof source === "object" && source !== null) {
     if (source.name) return source.name
     return extractPluginName(source.repo)
@@ -247,6 +257,7 @@ async function getManifest(source: PluginSource): Promise<PluginManifest | null>
 
 export async function loadQuartzConfig(
   configOverrides?: Partial<GlobalConfiguration>,
+  layoutOverrides?: Parameters<typeof loadQuartzLayout>[0],
 ): Promise<QuartzConfig> {
   const json = readPluginsJson()
 
@@ -267,6 +278,7 @@ export async function loadQuartzConfig(
   // Ensure all plugins are installed and collect native deps
   const allNativeDeps = new Map<string, Map<string, string>>()
   for (const entry of enabledEntries) {
+    if (isInternalSource(entry.source)) continue
     try {
       const gitSpec = parsePluginSource(entry.source)
       if (gitSpec.npmPackage) {
@@ -291,6 +303,7 @@ export async function loadQuartzConfig(
 
   // Collect manifests (requires native deps to be installed first)
   for (const entry of enabledEntries) {
+    if (isInternalSource(entry.source)) continue
     try {
       const manifest = await getManifest(entry.source)
       if (manifest) {
@@ -326,6 +339,7 @@ export async function loadQuartzConfig(
   const pageTypes: { entry: PluginJsonEntry; manifest: PluginManifest | undefined }[] = []
 
   for (const entry of enabledEntries) {
+    if (isInternalSource(entry.source)) continue
     const manifest = manifests.get(sourceKey(entry.source))
     const category = manifest?.category
     // Resolve processing categories: for array categories (e.g. ["transformer", "pageType", "component"]),
@@ -509,7 +523,7 @@ export async function loadQuartzConfig(
 
   // Load layout and add PageTypeDispatcher to emitters.
   // This must happen after plugin instantiation so the component registry is populated.
-  const layout = await loadQuartzLayout()
+  const layout = await loadQuartzLayout(layoutOverrides)
   plugins.emitters.push(
     builtinPlugins.PageTypes.PageTypeDispatcher({
       defaults: layout.defaults,

@@ -133,6 +133,13 @@ export class ComponentRegistry {
 
 export const componentRegistry = new ComponentRegistry()
 
+import GardenMenu from "./GardenMenu"
+import Spacer from "./Spacer"
+componentRegistry.register("garden-menu", GardenMenu, "internal")
+componentRegistry.register("GardenMenu", GardenMenu, "internal")
+componentRegistry.register("spacer", Spacer, "internal")
+componentRegistry.register("Spacer", Spacer, "internal")
+
 export function defineComponent<Options extends object | undefined = undefined>(
   factory: QuartzComponentConstructor<Options>,
   manifest: ComponentManifest,
