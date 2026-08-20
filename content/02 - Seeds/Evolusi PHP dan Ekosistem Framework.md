@@ -17,5 +17,5 @@ PHP di era 8.x sudah bukan bahasa skrip sederhana lagi. Dengan hadirnya **strict
 3. Mengapa Laravel menjadi framework paling populer di dunia PHP saat ini?
 
 ## 🔗 Tautan Terkait
-- Harian: [[2026-08-20]]
+- Harian: [[01 - Daily/2026-08-20]]
 - Pengembangan: [[Prinsip SOLID dan Clean Code pada PHP]]
