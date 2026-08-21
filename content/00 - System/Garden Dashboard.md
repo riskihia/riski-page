@@ -1,7 +1,7 @@
 ---
 type: system
 title: Garden Dashboard
-publish: true
+publish: false
 ---
 
 # 🌳 Digital Knowledge Garden Dashboard
