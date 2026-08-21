@@ -9,22 +9,22 @@ created: 2026-08-19
 
 ---
 
-## 🔄 Growth Pipeline
+## 🔄 Growth Pipeline (Lifecycle)
 
 ```text
-📅 Daily Note (01 - Daily)
-   │ (Penangkapan harian kronologis)
-   ↓
-🌱 Seed Note (02 - Seeds)
-   │ (Ide/gagasan mentah menarik)
-   ↓
-🌿 Growing Note (02 - Seeds / 03 - Garden)
-   │ (Sedang dikembangkan & diteliti)
-   ↓
-🌳 Evergreen Note (03 - Garden)
-   │ (Pengetahuan matang & terhubung)
-   ↓
-🌲 Knowledge Garden & 📚 Sources
+📅 01 - Daily   ➔ Tangkap observasi spontan harian
+       │
+       ↓
+🌱 02 - Seeds   ➔ stage: seed (Ide/gagasan mentah yang menarik)
+       │
+       ↓
+🌿 03 - Sprouts ➔ stage: sprout (Sedang dikembangkan & diteliti)
+       │
+       ↓
+🌳 04 - Plants  ➔ stage: plant (Pengetahuan matang & terhubung erat)
+       │
+       ↓
+🌾 05 - Harvest ➔ stage: harvest (Karya/output publik & hasil implementasi)
 ```
 
 ---
@@ -40,8 +40,8 @@ Catatan Seed tidak harus langsung rapi atau sempurna. Cukup tangkap inti pemikir
 ### Rule 3: Garden Notes Contain Your Understanding
 Evergreen note di Garden harus ditulis menggunakan pemahaman dan bahasa Anda sendiri, bukan sekadar salinan teks eksternal.
 
-### Rule 4: Links Are More Important Than Folders
-Folder hanya penataan fisik dasar. Hubungan antar-pengetahuan hidup melalui WikiLinks (`[[...]]`) dan Map of Content (MOC).
+### Rule 4: Links & Properties Are More Important Than Folders
+Gunakan property `stage` untuk status dan WikiLinks (`[[...]]`) untuk membangun jaringan pengetahuan.
 
 ### Rule 5: Do Not Force Every Seed to Become Garden
 Sebagian besar Seed boleh mati atau ditinggalkan jika sudah tidak relevan. Hanya kembangkan ide yang benar-benar bernilai.
@@ -50,15 +50,24 @@ Sebagian besar Seed boleh mati atau ditinggalkan jika sudah tidak relevan. Hanya
 Evergreen berarti catatan tersebut cukup matang untuk dipelihara, bukan berarti selesai. Gunakan seksi `## Evolution` untuk mencatat perkembangan pemahaman dari waktu ke waktu.
 
 ### Rule 7: Don't Optimize Before You Have Knowledge
-Jangan habiskan waktu mengurutkan puluhan tag, automation, atau estetika visual graph jika belum ada pengetahuan yang ditulis.
+Utamakan menulis dan mengolah wawasan dibandingkan merapikan tampilan visual.
 
 ---
 
-## 🏷️ Metadata Standard (Properties)
+## 🏷️ Standar Metadata (Properties)
 
-- **Tags**: Digunakan **hanya** untuk status/sistem (`#seed`, `#growing`, `#evergreen`, `#daily`, `#source`).
-- **Links (`[[...]]`)**: Digunakan untuk keterhubungan konsep & topik pengetahuan.
-- **Properties**:
-  - Daily: `type: daily`, `date: YYYY-MM-DD`
-  - Seed: `type: seed`, `status: seed | growing`, `created: YYYY-MM-DD`
-  - Garden: `type: garden`, `status: evergreen`, `created: YYYY-MM-DD`, `updated: YYYY-MM-DD`
+Setiap catatan di kebun menggunakan struktur frontmatter berikut:
+
+| Tipe Catatan | `type` | `stage` | `publish` | Deskripsi |
+| :--- | :--- | :--- | :--- | :--- |
+| **Seed** | `garden` | `seed` | `false` | Ide mentah / bibit pemikiran |
+| **Sprout** | `garden` | `sprout` | `false` | Sedang dieksplorasi aktif |
+| **Plant** | `garden` | `plant` | `true` | Pengetahuan matang (Evergreen) |
+| **Harvest** | `garden` | `harvest` | `true` | Artikel, studi kasus, atau produk jadi |
+| **Daily** | `daily` | - | `false` | Catatan harian kronologis |
+
+---
+
+## 📊 Dashboard Pemantauan
+* Buka **[[Garden Dashboard]]** untuk melihat distribusi pengetahuan Anda secara real-time.
+* Buka **[[Home]]** untuk dashboard aktivitas harian.

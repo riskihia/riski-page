@@ -1,9 +1,10 @@
 ---
 type: garden
-status: evergreen
+stage: plant
+publish: true
 created: {{date}}
 updated: {{date}}
-topics: []
+tags: []
 ---
 
 # {{title}}

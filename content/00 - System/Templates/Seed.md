@@ -1,8 +1,10 @@
 ---
-type: seed
-status: seed
+type: garden
+stage: seed
+publish: false
 created: {{date}}
-topics: []
+updated: {{date}}
+tags: []
 ---
 
 # {{title}}
