@@ -14,7 +14,8 @@ topics:
 ---
 
 ## 📌 Topik Utama
-- [[Master Your Emotional Self - The Law of Irrationality|Master Your Emotional Self (The Law of Irrationality)]]
+- [[Master Your Emotional Self - The Law of Irrationality|Hukum 1: Master Your Emotional Self (The Law of Irrationality)]]
+- [[Transform Self-Love into Empathy - The Law of Narcissism|Hukum 2: Transform Self-Love into Empathy (The Law of Narcissism)]]
 - [[Mental Models]]
 - [[Habit Formation]]
 - [[Learning Motivation]]
