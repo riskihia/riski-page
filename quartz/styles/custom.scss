@@ -216,24 +216,91 @@ h3 {
 }
 
 // --------------------------------------------------
-// 5. Interactive Link Styling
+// 5. Clean, Editorial Link Styling (No Badges / Boxes / Shadows)
 // --------------------------------------------------
 a.internal {
-  position: relative;
-  background-color: color-mix(in srgb, var(--highlight) 60%, transparent) !important;
+  background-color: transparent !important;
   color: var(--secondary) !important;
-  padding: 0.1rem 0.45rem !important;
-  border-radius: 6px !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
   font-weight: 500;
-  text-decoration: none !important;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  border-bottom: 1.5px solid color-mix(in srgb, var(--secondary) 35%, transparent);
+  text-decoration: underline !important;
+  text-decoration-color: color-mix(in srgb, var(--secondary) 35%, transparent) !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 1.5px !important;
+  box-shadow: none !important;
+  border: none !important;
+  transition:
+    color 0.15s ease,
+    text-decoration-color 0.15s ease !important;
 
   &:hover {
-    background-color: color-mix(in srgb, var(--secondary) 15%, transparent) !important;
-    color: var(--secondary) !important;
-    border-bottom-color: var(--secondary);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: transparent !important;
+    color: var(--tertiary) !important;
+    text-decoration-color: var(--tertiary) !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  &:has(> img) {
+    text-decoration: none !important;
+  }
+}
+
+a.external {
+  color: var(--secondary) !important;
+  text-decoration: underline !important;
+  text-decoration-color: color-mix(in srgb, var(--secondary) 35%, transparent) !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 1.5px !important;
+  transition:
+    color 0.15s ease,
+    text-decoration-color 0.15s ease !important;
+
+  &:hover {
+    color: var(--tertiary) !important;
+    text-decoration-color: var(--tertiary) !important;
+  }
+}
+
+// Sidebar Lists: Truncate long note titles with ellipsis instead of wrapping boxes
+.recent-notes,
+.backlinks {
+  ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0.4rem 0 !important;
+
+    li {
+      margin: 0.5rem 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+
+      a {
+        display: block;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 500;
+        text-decoration: none !important;
+        color: var(--darkgray) !important;
+        font-size: 0.92rem;
+        transition: color 0.15s ease;
+
+        &:hover {
+          color: var(--secondary) !important;
+          text-decoration: underline !important;
+          text-underline-offset: 2px !important;
+        }
+      }
+
+      .meta {
+        font-size: 0.78rem;
+        color: var(--gray);
+      }
+    }
   }
 }
 
