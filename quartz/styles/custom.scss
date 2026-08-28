@@ -615,6 +615,124 @@ pre {
       }
     }
   }
+
+  // --------------------------------------------------
+  // Right Sidebar Widgets Stacked on Mobile (Prevents Crammed 4-Column Layout)
+  // --------------------------------------------------
+  .sidebar.right {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 1.25rem !important;
+    margin-top: 2rem !important;
+    padding: 0 !important;
+    position: static !important;
+    height: auto !important;
+
+    & > * {
+      flex: none !important;
+      width: 100% !important;
+      max-height: none !important;
+      box-sizing: border-box !important;
+    }
+
+    .graph {
+      width: 100% !important;
+      background-color: color-mix(in srgb, var(--lightgray) 20%, transparent);
+      border: 1px solid color-mix(in srgb, var(--lightgray) 60%, transparent);
+      border-radius: 12px;
+      padding: 0.75rem;
+
+      h3 {
+        margin-top: 0 !important;
+        font-size: 0.95rem !important;
+      }
+
+      .graph-outer {
+        height: 220px !important;
+        max-height: 220px !important;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+
+    .toc {
+      width: 100% !important;
+      background-color: color-mix(in srgb, var(--lightgray) 20%, transparent) !important;
+      border: 1px solid color-mix(in srgb, var(--lightgray) 60%, transparent) !important;
+      border-radius: 12px !important;
+      padding: 0.75rem 1rem !important;
+      margin: 0 !important;
+    }
+
+    .recent-notes,
+    .backlinks {
+      width: 100% !important;
+      background-color: color-mix(in srgb, var(--lightgray) 20%, transparent) !important;
+      border: 1px solid color-mix(in srgb, var(--lightgray) 60%, transparent) !important;
+      border-radius: 12px !important;
+      padding: 0.75rem 1rem !important;
+
+      h3 {
+        margin-top: 0 !important;
+        font-size: 0.95rem !important;
+      }
+
+      ul {
+        padding-left: 1.2rem !important;
+        margin: 0.4rem 0 0 0 !important;
+      }
+    }
+  }
+
+  // --------------------------------------------------
+  // Centered Clean Footer on Mobile
+  // --------------------------------------------------
+  footer {
+    width: 100% !important;
+    margin-top: 2.5rem !important;
+    padding: 1.5rem 0 2rem 0 !important;
+    border-top: 1px solid color-mix(in srgb, var(--lightgray) 80%, transparent) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.6rem !important;
+
+    p {
+      margin: 0 !important;
+      font-size: 0.85rem !important;
+      color: var(--gray) !important;
+    }
+
+    ul {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 1.5rem !important;
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+
+      li {
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+
+        a {
+          font-size: 0.9rem !important;
+          color: var(--secondary) !important;
+          text-decoration: none !important;
+          font-weight: 500 !important;
+
+          &:hover {
+            text-decoration: underline !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 // --------------------------------------------------
