@@ -20,24 +20,8 @@ const defaultSections: MenuSection[] = [
     title: "The Garden",
     items: [
       { name: "Welcome / Start Here", icon: "🏡", href: "/" },
-      { name: "Tech Knowledge Map", icon: "🗺️", href: "/#-10-topik-pengetahuan-utama-tech-knowledge-map" },
       { name: "Evergreen Notes", icon: "🌳", href: "/04---plants", badge: "Core" },
       { name: "Essays & Harvest", icon: "🌾", href: "/05---harvest", badge: "Articles" },
-    ],
-  },
-  {
-    title: "About & Works",
-    items: [
-      { name: "About Me", icon: "👤", href: "/about" },
-      { name: "GitHub Projects", icon: "🛠️", href: "https://github.com/riskihia", external: true },
-      { name: "Portofolio", icon: "🚀", href: "https://github.com/riskihia", external: true },
-    ],
-  },
-  {
-    title: "Discovery",
-    items: [
-      { name: "Explore by Tags", icon: "🏷️", href: "/tags" },
-      { name: "RSS Feed", icon: "📡", href: "/index.xml" },
     ],
   },
 ]
