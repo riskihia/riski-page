@@ -89,4 +89,3 @@ WHERE id = 2;
 - 🌱 **Bibit Awal:** [[Dasar dan Operasi PostgreSQL Lokal]]
 - 🌿 **Catatan Berkembang:** [[Eksplorasi Workflow PostgreSQL Lokal dan psql CLI]]
 - 🌾 **Artikel Lengkap (Harvest):** [[Panduan Lengkap PostgreSQL Lokal dari Nol - Instalasi, Akses CLI, Query Dasar, hingga Shortcut Esensial]]
-- 📚 **Catatan Terkait:** [[Databases]] | [[Optimasi Query SQL]]

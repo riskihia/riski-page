@@ -186,4 +186,3 @@ Perintah internal `psql` diawali simbol *backslash* (`\`) dan **TIDAK** membutuh
 - 🌱 **Bibit Pemikiran (Seed):** [[Dasar dan Operasi PostgreSQL Lokal]]
 - 🌿 **Analisis & Eksplorasi (Sprout):** [[Eksplorasi Workflow PostgreSQL Lokal dan psql CLI]]
 - 🌳 **Evergreen Note (Plant):** [[Panduan Esensial PostgreSQL Lokal]]
-- 🗄️ **Topik Terkait:** [[Databases]] | [[Optimasi Query SQL]]
