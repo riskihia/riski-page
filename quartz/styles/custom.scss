@@ -616,3 +616,99 @@ pre {
     }
   }
 }
+
+// --------------------------------------------------
+// 11. Robust Table of Contents (TOC) & Collapse Fix
+// --------------------------------------------------
+.toc {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: auto !important;
+  flex: 0 0 auto !important;
+  margin-bottom: 0.8rem;
+
+  &:has(button.toc-header.collapsed) {
+    flex: 0 0 auto !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  button.toc-header {
+    background-color: transparent !important;
+    border: none !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    padding: 0.25rem 0 !important;
+    color: var(--dark) !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 1.5rem !important;
+
+    h3 {
+      font-size: 0.95rem !important;
+      font-weight: 600 !important;
+      display: inline-block !important;
+      margin: 0 !important;
+      line-height: 1.4 !important;
+      color: var(--dark) !important;
+    }
+
+    .fold {
+      margin-left: 0.5rem !important;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      opacity: 0.75 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+    }
+
+    &.collapsed {
+      .fold {
+        transform: rotateZ(-90deg) !important;
+      }
+    }
+  }
+
+  ul.toc-content {
+    list-style: none !important;
+    position: relative !important;
+    margin: 0.4rem 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    max-height: none !important;
+
+    &.collapsed {
+      display: none !important;
+    }
+
+    li {
+      margin: 0.2rem 0 !important;
+      line-height: 1.45 !important;
+      list-style: none !important;
+
+      a {
+        color: var(--darkgray) !important;
+        font-size: 0.88rem !important;
+        text-decoration: none !important;
+        opacity: 0.65 !important;
+        transition: all 0.2s ease !important;
+        display: inline-block !important;
+        background-color: transparent !important;
+        border-bottom: none !important;
+        padding: 0 !important;
+
+        &:hover,
+        &.in-view {
+          opacity: 1 !important;
+          color: var(--secondary) !important;
+          font-weight: 500 !important;
+          box-shadow: none !important;
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+}
+
