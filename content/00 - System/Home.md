@@ -55,12 +55,12 @@ GROUP BY true
 
 ---
 
-## 🌳 Knowledge Maps (Main Gardens)
+## 🌳 Knowledge Areas (Main Gardens)
 
-* 🤖 **[[AI]]** — *Artificial Intelligence, LLM, RAG, & Agents*
-* 💻 **[[Programming]]** — *Software Architecture, Clean Code, & Engineering*
-* 💼 **[[Business]]** — *Strategy, Product, & Growth*
+* 🗄️ **[[Panduan Esensial PostgreSQL Lokal|Databases]]** — *PostgreSQL & Database Engineering*
+* 🍲 **[[Kuliner]]** — *Resep & Sains Kuliner*
 * 🧠 **[[Psychology]]** — *Mental Models, Learning, & Behavior*
+* 💼 **[[Business]]** — *Strategy, Product, & Growth*
 * ✍️ **[[Writing]]** — *Storytelling, Worldbuilding, & Structure*
 
 ---
