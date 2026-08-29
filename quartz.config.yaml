@@ -45,6 +45,9 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
+  - source: "@quartz-community/note-properties"
+    enabled: true
+    order: 5
   - source: "@quartz-community/created-modified-date"
     enabled: true
     options:

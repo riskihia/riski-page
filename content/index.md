@@ -1,9 +1,7 @@
 ---
-title: Welcome to Riski's Technology Garden
+title: "🌳 Riski's Technology Knowledge Garden"
 publish: true
 ---
-
-# 🌳 Riski's Technology Knowledge Garden
 
 > *A place to capture daily thoughts, cultivate software engineering concepts, and grow lifetime tech knowledge.*
 
