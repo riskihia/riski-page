@@ -13,8 +13,6 @@ tags:
   - evergreen
 ---
 
-# 🌳 Panduan Esensial PostgreSQL Lokal
-
 > **Status:** Plant / Evergreen Note (Matang & Terstruktur)  
 > **Kategori:** Database Management & SQL Engineering  
 

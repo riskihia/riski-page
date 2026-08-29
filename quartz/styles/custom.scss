@@ -897,3 +897,194 @@ pre {
   }
 }
 
+// ==================================================
+// 📜 CLASSICAL SCHOLARLY BOOK & MANUSCRIPT ENHANCEMENT
+// ==================================================
+
+// 1. Callout Naskah Perkamen Antik (Antique Manuscript Callouts)
+.callout {
+  border: 1px solid var(--lightgray) !important;
+  border-left: 4px solid var(--secondary) !important;
+  background: var(--light) !important;
+  box-shadow: inset 0 0 0 1px rgba(138, 44, 22, 0.05), 0 2px 8px rgba(30, 23, 17, 0.04) !important;
+  border-radius: 2px !important;
+  padding: 0.85rem 1.25rem !important;
+  margin: 1.5rem 0 !important;
+  position: relative !important;
+
+  & > .callout-title {
+    font-family: var(--typography-header), "EB Garamond", Georgia, serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.03em !important;
+    color: var(--secondary) !important;
+    padding-bottom: 0.35rem !important;
+    border-bottom: 1px dashed var(--lightgray) !important;
+    margin-bottom: 0.65rem !important;
+
+    .callout-title-inner {
+      font-style: italic !important;
+    }
+  }
+
+  & > .callout-content {
+    font-family: var(--typography-body), "EB Garamond", Georgia, serif !important;
+    font-size: 0.98rem !important;
+    line-height: 1.65 !important;
+    color: var(--darkgray) !important;
+  }
+
+  // Varian Warna Khusus Berdasarkan Tipe Callout (Nuansa Tinta Klasik)
+  &[data-callout="note"],
+  &[data-callout="info"] {
+    border-left-color: #8a2c16 !important; // Venetian Burgundy
+    & > .callout-title { color: #8a2c16 !important; }
+  }
+
+  &[data-callout="tip"],
+  &[data-callout="important"] {
+    border-left-color: #28523c !important; // Antique Forest Sage
+    & > .callout-title { color: #28523c !important; }
+  }
+
+  &[data-callout="warning"],
+  &[data-callout="caution"] {
+    border-left-color: #b45309 !important; // Burnt Ochre
+    & > .callout-title { color: #b45309 !important; }
+  }
+
+  &[data-callout="quote"],
+  &[data-callout="abstract"] {
+    border-left-color: #6b5b4d !important; // Sepia Bronze
+    & > .callout-title { color: #6b5b4d !important; }
+  }
+}
+
+// 2. Tabel Bergaya Buku Akademik Klasik (Classic Booktabs Style)
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 2rem 0 !important;
+  font-family: var(--typography-body), "EB Garamond", Georgia, serif !important;
+  font-size: 1rem !important;
+  border-top: 2px solid var(--dark) !important;
+  border-bottom: 2px solid var(--dark) !important;
+  border-left: none !important;
+  border-right: none !important;
+
+  thead {
+    border-bottom: 1px solid var(--dark) !important;
+
+    th {
+      font-family: var(--typography-header), "EB Garamond", Georgia, serif !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      font-size: 0.85rem !important;
+      color: var(--dark) !important;
+      padding: 0.75rem 1rem !important;
+      background: transparent !important;
+      border: none !important;
+      text-align: left !important;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid var(--lightgray) !important;
+      transition: background-color 0.15s ease !important;
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+
+      &:hover {
+        background-color: var(--highlight) !important;
+      }
+
+      td {
+        padding: 0.75rem 1rem !important;
+        border: none !important;
+        color: var(--darkgray) !important;
+        line-height: 1.55 !important;
+      }
+    }
+  }
+}
+
+// 3. Garis Pembatas Ornamen Klasik (Flourish Horizontal Rule)
+hr {
+  border: none !important;
+  height: auto !important;
+  text-align: center !important;
+  margin: 3rem 0 !important;
+  position: relative !important;
+
+  &::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, transparent, var(--gray), transparent) !important;
+    z-index: 1 !important;
+  }
+
+  &::after {
+    content: "❦" !important;
+    position: relative !important;
+    display: inline-block !important;
+    padding: 0 1rem !important;
+    color: var(--gray) !important;
+    font-size: 1.25rem !important;
+    background: var(--light) !important;
+    z-index: 2 !important;
+  }
+}
+
+// 4. Kutipan Bergaya Buku Antik (Classic Blockquote)
+blockquote {
+  margin: 1.8rem 0 !important;
+  padding: 0.6rem 1.5rem 0.6rem 1.8rem !important;
+  border-left: 3px solid var(--secondary) !important;
+  font-style: italic !important;
+  font-size: 1.08rem !important;
+  line-height: 1.7 !important;
+  color: var(--darkgray) !important;
+  background: transparent !important;
+  position: relative !important;
+
+  p {
+    margin: 0 !important;
+  }
+}
+
+// 5. Tautan Tinta Antik (Antique Ink Links)
+article a:not(.internal) {
+  color: var(--secondary) !important;
+  text-decoration: underline !important;
+  text-decoration-style: dotted !important;
+  text-underline-offset: 3px !important;
+  transition: all 0.2s ease !important;
+
+  &:hover {
+    color: var(--tertiary) !important;
+    text-decoration-style: solid !important;
+  }
+}
+
+a.internal {
+  color: var(--secondary) !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--lightgray) !important;
+  transition: all 0.2s ease !important;
+
+  &:hover {
+    color: var(--dark) !important;
+    border-bottom-color: var(--secondary) !important;
+    background-color: var(--highlight) !important;
+  }
+}
+

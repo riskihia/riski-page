@@ -13,8 +13,6 @@ tags:
   - cheatsheet
 ---
 
-# 🌾 Panduan Lengkap PostgreSQL Lokal dari Nol - Instalasi, Akses CLI, Query Dasar, hingga Shortcut Esensial
-
 > **Status:** Harvest (Karya / Output Publik Teruji)  
 > **Target Audiens:** Mahasiswa, Pengembang Backend, dan Pemula Database  
 > **Dibuat:** 2026-08-29  

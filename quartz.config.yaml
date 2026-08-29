@@ -25,29 +25,31 @@ configuration:
       code: Fira Code
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#fbf8f1"
+        lightgray: "#eae3d2"
+        gray: "#968b7b"
+        darkgray: "#42382f"
+        dark: "#1e1711"
+        secondary: "#8a2c16"
+        tertiary: "#28523c"
+        highlight: "rgba(218, 165, 32, 0.15)"
+        textHighlight: "#eedaa288"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#161311"
+        lightgray: "#28231f"
+        gray: "#7a7065"
+        darkgray: "#d6cdbf"
+        dark: "#f2ece1"
+        secondary: "#d8a657"
+        tertiary: "#61a87e"
+        highlight: "rgba(216, 166, 87, 0.18)"
+        textHighlight: "#d8a65744"
 plugins:
   - source: "@quartz-community/note-properties"
     enabled: true
     order: 5
+    options:
+      hidePropertiesView: true
   - source: "@quartz-community/created-modified-date"
     enabled: true
     options:

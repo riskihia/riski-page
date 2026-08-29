@@ -12,8 +12,6 @@ tags:
   - devops
 ---
 
-# 🌿 Eksplorasi Workflow PostgreSQL Lokal dan psql CLI
-
 > **Status:** Sprout (Sedang Dikembangkan & Dianalisis)  
 > **Asal Ide:** Terhubung dari [[Dasar dan Operasi PostgreSQL Lokal]]  
 

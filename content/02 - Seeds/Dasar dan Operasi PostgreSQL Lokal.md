@@ -12,8 +12,6 @@ tags:
   - learning
 ---
 
-# 🌱 Dasar dan Operasi PostgreSQL Lokal
-
 > **Status:** Seed (Ide Mentah / Bibit Pemikiran)  
 > **Dibuat:** 2026-08-29  
 
